@@ -9,15 +9,15 @@ class EmailParser
   end
 
   def parse
-    @string.tr(',', '').split(' ').uniq
+    @string.tr(',', ' ').split.uniq
   end
 
 end 
 
-#Pry.start
+Pry.start
 
 # ====
-# list1 = EmailParser.new("jon@alexander.com, jonathan@gmail.com, hello@gmail.com")
+# list1 = EmailParser.new("jon@alexander.com,jonathan@gmail.com, hello@gmail.com")
 # list1.parse => "jon@alexander.com, jonathan@gmail.com, hello@gmail.com"
 
 # list2 = EmailParser.new("hello@gmail.com goodbye@gmail.com welcome@hotmail.com")
